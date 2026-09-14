@@ -28,49 +28,64 @@ export default function Footer() {
 
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="hover:text-orange-500">
+                <Link href="/" className="hover:text-orange-500 transition">
                   Home
                 </Link>
               </li>
 
               <li>
-                <Link href="/about" className="hover:text-orange-500">
+                <Link href="/about" className="hover:text-orange-500 transition">
                   About
                 </Link>
               </li>
 
               <li>
-                <Link href="/tour-packages" className="hover:text-orange-500">
+                <Link
+                  href="/tour-packages"
+                  className="hover:text-orange-500 transition"
+                >
                   Tour Packages
                 </Link>
               </li>
 
               <li>
-                <Link href="/cab-rental" className="hover:text-orange-500">
+                <Link
+                  href="/cab-rental"
+                  className="hover:text-orange-500 transition"
+                >
                   Cab Rental
                 </Link>
               </li>
 
               <li>
-                <Link href="/destinations" className="hover:text-orange-500">
+                <Link
+                  href="/destinations"
+                  className="hover:text-orange-500 transition"
+                >
                   Destinations
                 </Link>
               </li>
 
               <li>
-                <Link href="/testimonials" className="hover:text-orange-500">
+                <Link
+                  href="/testimonials"
+                  className="hover:text-orange-500 transition"
+                >
                   Testimonials
                 </Link>
               </li>
 
               <li>
-                <Link href="/faq" className="hover:text-orange-500">
+                <Link href="/faq" className="hover:text-orange-500 transition">
                   FAQ
                 </Link>
               </li>
 
               <li>
-                <Link href="/contact" className="hover:text-orange-500">
+                <Link
+                  href="/contact"
+                  className="hover:text-orange-500 transition"
+                >
                   Contact
                 </Link>
               </li>
@@ -158,28 +173,28 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
 
           <p className="text-sm text-gray-500 text-center md:text-left">
-            © 2026 Udaipur Trips. All Rights Reserved.
+            © 2026 UdaipurTrips. All Rights Reserved.
           </p>
 
           <div className="flex gap-6 text-sm">
 
             <Link
               href="/privacy-policy"
-              className="hover:text-orange-500"
+              className="hover:text-orange-500 transition"
             >
               Privacy Policy
             </Link>
 
             <Link
-              href="/terms"
-              className="hover:text-orange-500"
+              href="/terms-and-conditions"
+              className="hover:text-orange-500 transition"
             >
               Terms & Conditions
             </Link>
 
             <Link
               href="/faq"
-              className="hover:text-orange-500"
+              className="hover:text-orange-500 transition"
             >
               FAQ
             </Link>

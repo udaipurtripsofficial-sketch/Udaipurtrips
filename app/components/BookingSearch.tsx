@@ -4,6 +4,32 @@ import { useState } from "react";
 
 export default function BookingSearch() {
   const [service, setService] = useState("Cab Booking");
+  const [destination, setDestination] = useState("");
+  const [travelDate, setTravelDate] = useState("");
+  const [guests, setGuests] = useState("1 Guest");
+  const [mobile, setMobile] = useState("");
+
+  const handleBooking = () => {
+    if (!destination.trim() || !travelDate || !mobile.trim()) {
+      alert("Please fill Destination, Travel Date and Mobile number.");
+      return;
+    }
+
+    const message = `🚖 *New Booking Request - UdaipurTrips*
+
+🧾 Service: ${service}
+📍 Destination: ${destination}
+📅 Travel Date: ${travelDate}
+👥 Guests: ${guests}
+📞 Mobile: ${mobile}
+
+Please contact me regarding this booking.`;
+
+    window.open(
+      `https://wa.me/917070903126?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
+  };
 
   return (
     <section className="-mt-20 relative z-20 px-6">
@@ -48,6 +74,8 @@ export default function BookingSearch() {
 
             <input
               type="text"
+              value={destination}
+              onChange={(e) => setDestination(e.target.value)}
               placeholder="City Palace, Lake Pichola..."
               className="w-full h-14 rounded-xl border border-gray-300 px-4 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
@@ -61,6 +89,8 @@ export default function BookingSearch() {
 
             <input
               type="date"
+              value={travelDate}
+              onChange={(e) => setTravelDate(e.target.value)}
               className="w-full h-14 rounded-xl border border-gray-300 px-4 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
           </div>
@@ -71,7 +101,11 @@ export default function BookingSearch() {
               Guests
             </label>
 
-            <select className="w-full h-14 rounded-xl border border-gray-300 px-4 focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <select
+              value={guests}
+              onChange={(e) => setGuests(e.target.value)}
+              className="w-full h-14 rounded-xl border border-gray-300 px-4 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            >
               <option>1 Guest</option>
               <option>2 Guests</option>
               <option>3 Guests</option>
@@ -88,6 +122,8 @@ export default function BookingSearch() {
 
             <input
               type="tel"
+              value={mobile}
+              onChange={(e) => setMobile(e.target.value)}
               placeholder="+91 XXXXX XXXXX"
               className="w-full h-14 rounded-xl border border-gray-300 px-4 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
@@ -95,7 +131,11 @@ export default function BookingSearch() {
 
           {/* Button */}
           <div>
-            <button className="w-full h-14 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg transition">
+            <button
+              type="button"
+              onClick={handleBooking}
+              className="w-full h-14 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg transition"
+            >
               Book Now
             </button>
           </div>

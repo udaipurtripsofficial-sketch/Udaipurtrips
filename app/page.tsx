@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import Hero from "./components/Hero";
-import BookingSearch from "./components/BookingSearch";
 import WhyChoose from "./components/WhyChoose";
 import PopularDestinations from "./components/PopularDestinations";
 import TourPackages from "./components/TourPackages";
@@ -64,31 +63,28 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Booking Search */}
-      <BookingSearch />
-
       {/* Why Choose Us */}
-      <section id="why-choose" className="py-12">
+      <section id="why-choose" className="py-8">
         <WhyChoose />
       </section>
 
       {/* Popular Destinations */}
-      <section id="destinations" className="py-12">
+      <section id="destinations" className="py-8">
         <PopularDestinations />
       </section>
 
       {/* Tour Packages */}
-      <section id="packages" className="py-12">
+      <section id="packages" className="py-8">
         <TourPackages />
       </section>
 
       {/* Cab Fleet */}
-      <section id="cars" className="py-12">
+      <section id="cars" className="py-8">
         <CabFleet />
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-12">
+      <section id="testimonials" className="py-8">
         <Testimonials />
       </section>
     </main>

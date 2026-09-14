@@ -1,77 +1,102 @@
 export default function WhyChoose() {
   const features = [
     {
-      icon: "🚖",
+      number: "01",
       title: "Premium Cab Fleet",
       description:
-        "Well-maintained sedans, SUVs and tempo travellers for every journey.",
+        "Well-maintained sedans, SUVs and premium vehicles for comfortable journeys across Udaipur and Rajasthan.",
     },
     {
-      icon: "👨‍✈️",
+      number: "02",
       title: "Professional Drivers",
       description:
-        "Experienced, polite and verified local drivers for a safe trip.",
+        "Experienced local drivers who understand the city, routes and the needs of our travelers.",
     },
     {
-      icon: "💰",
-      title: "Best Price Guarantee",
+      number: "03",
+      title: "Transparent Pricing",
       description:
-        "Transparent pricing with no hidden charges and great value.",
+        "Clear and honest pricing with no hidden charges, so you know exactly what you are paying for.",
     },
     {
-      icon: "📞",
-      title: "24×7 Support",
+      number: "04",
+      title: "Personalized Trips",
       description:
-        "Our travel team is available anytime before and during your trip.",
+        "From sightseeing to multi-day Rajasthan journeys, every trip can be planned around your preferences.",
     },
     {
-      icon: "🏰",
-      title: "Local Travel Experts",
+      number: "05",
+      title: "Local Expertise",
       description:
-        "Discover the best attractions with experienced local guides.",
+        "Discover Udaipur beyond the usual tourist spots with knowledge from people who know the destination.",
     },
     {
-      icon: "⭐",
-      title: "Trusted by Travelers",
+      number: "06",
+      title: "Dedicated Support",
       description:
-        "Hundreds of happy guests choose UdaipurTrips every year.",
+        "Our team stays available before and during your journey to help make your travel experience smooth.",
     },
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-[#f7f5f0] py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        {/* Heading */}
+        <div className="mb-16 max-w-3xl">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-orange-600">
+            The UdaipurTrips Difference
+          </p>
 
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-gray-900">
-            Why Choose UdaipurTrips?
+          <h2 className="text-4xl font-semibold tracking-tight text-gray-950 md:text-5xl">
+            Travel with confidence.
+            <br />
+            <span className="text-gray-500">
+              Experience Udaipur differently.
+            </span>
           </h2>
 
-          <p className="mt-5 text-lg text-gray-600 max-w-3xl mx-auto">
-            We provide premium travel experiences with trusted local experts,
-            luxury vehicles, transparent pricing and 24×7 customer support.
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+            Thoughtfully planned journeys, premium transportation and trusted
+            local expertise — everything you need for a memorable Udaipur
+            experience.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
-          {features.map((feature, index) => (
+        {/* Features */}
+        <div className="grid border-t border-[#ded9d0] md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => (
             <div
-              key={index}
-              className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-2"
+              key={feature.number}
+              className="group border-b border-[#ded9d0] p-8 transition duration-300 hover:bg-white lg:nth-[3n+1]:border-r lg:nth-[3n+2]:border-r"
             >
-              <div className="text-5xl mb-5">{feature.icon}</div>
+              <div className="mb-10 flex items-center justify-between">
+                <span className="text-sm font-medium tracking-widest text-gray-400">
+                  {feature.number}
+                </span>
 
-              <h3 className="text-2xl font-bold mb-3">
+                <span className="h-px w-10 bg-orange-500 transition-all duration-300 group-hover:w-16" />
+              </div>
+
+              <h3 className="mb-4 text-xl font-semibold text-gray-950">
                 {feature.title}
               </h3>
 
-              <p className="text-gray-600 leading-7">
+              <p className="text-[15px] leading-7 text-gray-600">
                 {feature.description}
               </p>
             </div>
           ))}
+        </div>
 
+        {/* Bottom trust line */}
+        <div className="mt-12 flex flex-col gap-4 border-t border-[#ded9d0] pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-gray-500">
+            Your journey. Our local expertise.
+          </p>
+
+          <p className="text-sm font-medium text-gray-900">
+            Udaipur • Rajasthan • India
+          </p>
         </div>
       </div>
     </section>

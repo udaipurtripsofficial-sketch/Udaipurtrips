@@ -18,36 +18,39 @@ export default function Navbar() {
         {/* Navigation */}
         <div className="hidden md:flex items-center gap-8 text-white font-medium">
 
-          <Link href="/" className="hover:text-orange-500 transition">
+          <Link
+            href="/"
+            className="hover:text-orange-500 transition"
+          >
             Home
           </Link>
 
-          <Link href="/tour-packages" className="hover:text-orange-500 transition">
+          <Link
+            href="/tour-packages"
+            className="hover:text-orange-500 transition"
+          >
             Packages
           </Link>
 
-          <Link href="/cab-rental" className="hover:text-orange-500 transition">
+          <Link
+            href="/cab-rental"
+            className="hover:text-orange-500 transition"
+          >
             Cars
           </Link>
 
-          <Link href="/destinations" className="hover:text-orange-500 transition">
+          <Link
+            href="/destinations"
+            className="hover:text-orange-500 transition"
+          >
             Destinations
           </Link>
 
-          <Link href="/about" className="hover:text-orange-500 transition">
-            About
-          </Link>
-
-          <Link href="/testimonials" className="hover:text-orange-500 transition">
+          <Link
+            href="/testimonials"
+            className="hover:text-orange-500 transition"
+          >
             Testimonials
-          </Link>
-
-          <Link href="/faq" className="hover:text-orange-500 transition">
-            FAQ
-          </Link>
-
-          <Link href="/contact" className="hover:text-orange-500 transition">
-            Contact
           </Link>
 
         </div>

@@ -4,7 +4,6 @@ import DestinationCard from "../components/DestinationCard";
 
 export const metadata: Metadata = {
   title: "Places to Visit in Udaipur | Udaipur Sightseeing",
-
   description:
     "Discover the best places to visit in Udaipur and nearby Rajasthan with UdaipurTrips. Explore City Palace, Lake Pichola, Sajjangarh, Fateh Sagar, Jagmandir, Kumbhalgarh, Ranakpur, Mount Abu and more.",
 
@@ -31,12 +30,12 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "https://udaipurtrips.com/destinations",
+    canonical: "https://www.udaipurtrips.com/destinations",
   },
 
   openGraph: {
     type: "website",
-    url: "https://udaipurtrips.com/destinations",
+    url: "https://www.udaipurtrips.com/destinations",
     title: "Places to Visit in Udaipur | UdaipurTrips",
     description:
       "Explore the best places to visit in Udaipur and nearby Rajasthan, including royal palaces, lakes, forts, temples and scenic destinations.",
@@ -172,65 +171,82 @@ const destinations = [
 
 export default function DestinationsPage() {
   return (
-    <main className="min-h-screen bg-[#fffaf5]">
+    <main className="min-h-screen bg-[#f7f5f0]">
 
-      {/* ================= HERO ================= */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#fff1e6] via-[#fffaf5] to-[#ffe7d1] py-24">
+      {/* ================= PREMIUM HERO ================= */}
+      <section className="relative min-h-[560px] overflow-hidden">
 
-        <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-orange-200/30 blur-3xl" />
-        <div className="absolute -right-24 top-20 h-80 w-80 rounded-full bg-red-200/20 blur-3xl" />
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/images/raitahills.jpg')",
+          }}
+        />
 
-        <div className="relative mx-auto max-w-7xl px-6 text-center">
+        {/* Dark Cinematic Overlay */}
+        <div className="absolute inset-0 bg-black/55" />
 
-          <div className="mb-5 inline-flex items-center rounded-full border border-orange-200 bg-white/80 px-5 py-2 text-sm font-semibold text-orange-600 shadow-sm backdrop-blur">
-            ✦ Explore Rajasthan
-          </div>
+        {/* Premium Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/45 to-black/75" />
 
-          <h1 className="mx-auto max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-            Discover the
-            <span className="block bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-              Royal Soul of Rajasthan
-            </span>
-          </h1>
+        {/* Hero Content */}
+        <div className="relative mx-auto flex min-h-[560px] max-w-7xl items-center justify-center px-6 py-24 text-center">
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-gray-600 sm:text-lg">
-            From magnificent palaces and peaceful lakes to historic forts,
-            temples and breathtaking hills — discover unforgettable places
-            with UdaipurTrips.
-          </p>
+          <div className="max-w-4xl">
 
-          <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mb-6 inline-flex items-center rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm font-semibold tracking-[0.15em] text-white backdrop-blur-md">
+              ✦ EXPLORE RAJASTHAN
+            </div>
 
-            <Link
-              href="/tour-packages"
-              className="rounded-xl bg-gradient-to-r from-orange-500 to-red-500 px-7 py-3.5 font-bold text-white shadow-lg shadow-orange-200 transition hover:-translate-y-1 hover:shadow-xl"
-            >
-              Explore Tour Packages
-            </Link>
+            <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Discover the
+              <span className="block text-orange-400">
+                Royal Soul of Rajasthan
+              </span>
+            </h1>
 
-            <Link
-              href="/booking"
-              className="rounded-xl border border-orange-300 bg-white px-7 py-3.5 font-bold text-orange-600 shadow-sm transition hover:-translate-y-1 hover:bg-orange-50"
-            >
-              Plan Your Trip
-            </Link>
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg">
+              From magnificent palaces and peaceful lakes to historic forts,
+              temples and breathtaking hills — discover unforgettable places
+              with UdaipurTrips.
+            </p>
+
+            <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+
+              <Link
+                href="/tour-packages"
+                className="rounded-xl bg-orange-500 px-7 py-3.5 font-bold text-white shadow-xl transition duration-300 hover:-translate-y-1 hover:bg-orange-400"
+              >
+                Explore Tour Packages
+              </Link>
+
+              <Link
+                href="/booking"
+                className="rounded-xl border border-white/50 bg-white/10 px-7 py-3.5 font-bold text-white backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/20"
+              >
+                Plan Your Trip
+              </Link>
+
+            </div>
 
           </div>
         </div>
       </section>
 
       {/* ================= DESTINATIONS ================= */}
-      <section className="relative bg-gradient-to-b from-[#fffaf5] to-[#f8f8f8] py-20">
+      <section className="relative bg-[#f7f5f0] py-16 sm:py-20">
 
         <div className="mx-auto max-w-7xl px-6">
 
-          <div className="mb-14 text-center">
+          {/* Section Heading */}
+          <div className="mb-12 text-center">
 
             <div className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-orange-500">
               Places Worth Visiting
             </div>
 
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               Popular Destinations
             </h2>
 
@@ -239,25 +255,30 @@ export default function DestinationsPage() {
               temples and scenic places around Udaipur and Rajasthan.
             </p>
 
-            <div className="mx-auto mt-6 h-1 w-20 rounded-full bg-gradient-to-r from-orange-500 to-red-500" />
+            <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-gradient-to-r from-orange-500 to-red-500" />
+
           </div>
 
+          {/* Destination Cards */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
             {destinations.map((destination) => (
               <DestinationCard
                 key={destination.name}
                 {...destination}
               />
             ))}
+
           </div>
 
         </div>
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-orange-600 via-orange-500 to-red-500 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-r from-orange-600 via-orange-500 to-red-500 py-16 sm:py-20">
 
         <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
+
         <div className="absolute -bottom-24 -right-20 h-72 w-72 rounded-full bg-black/10 blur-3xl" />
 
         <div className="relative mx-auto max-w-4xl px-6 text-center text-white">
@@ -275,7 +296,7 @@ export default function DestinationsPage() {
             comfortable and memorable Rajasthan experience.
           </p>
 
-          <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
 
             <Link
               href="/booking"
